@@ -350,6 +350,11 @@ body {
   gap: 24px;
 }
 
+.cards-single {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
 .studio-card {
   background: #ffffff;
   border: 1px solid var(--border);

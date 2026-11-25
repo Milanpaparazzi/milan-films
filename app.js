@@ -69,9 +69,11 @@
         el("hero-cover").src = wedding.coverImage;
       }
       el("wedding-note").textContent = wedding.note || "";
-      el("drive-size").textContent = wedding.driveFileSize || "MP4 4K";
+      el("drive-size").textContent = wedding.driveFileSize || "MP4";
       el("wedding-date").textContent = wedding.date || "";
-      el("wedding-location").textContent = wedding.location || "4K Ultra HD";
+      if (el("wedding-location")) {
+        el("wedding-location").textContent = wedding.location || "";
+      }
       el("drive-download-btn").href = wedding.driveDownloadUrl || "#";
       const driveClipBtn = el("drive-clip-btn");
       if (driveClipBtn) {
@@ -133,13 +135,15 @@
         });
       }
 
-      // Share buttons
-      el("nav-share-btn").addEventListener("click", () =>
-        sharePage(wedding.couple)
-      );
-      el("card-share-btn").addEventListener("click", () =>
-        sharePage(wedding.couple)
-      );
+      // Share button in header
+      const navShareBtn = el("nav-share-btn");
+      if (navShareBtn) {
+        navShareBtn.addEventListener("click", () => sharePage(wedding.couple));
+      }
+      const cardShareBtn = el("card-share-btn");
+      if (cardShareBtn) {
+        cardShareBtn.addEventListener("click", () => sharePage(wedding.couple));
+      }
     })
     .catch(() => {
       renderPlayer("");
