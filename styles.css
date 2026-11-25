@@ -401,6 +401,17 @@ body {
   color: var(--ink);
 }
 
+.backup-notice {
+  margin: 0 0 22px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border-left: 3px solid var(--ink);
+  border-radius: var(--radius);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
 /* Brand Section */
 .brand-card {
   background: var(--surface);
