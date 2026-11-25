@@ -1,0 +1,27 @@
+{
+  "brand": {
+    "name": "MILAN NECHESANOV",
+    "tagline": "Wedding Cinematography",
+    "bio": "Естетичне весільне кіно. Зберігаємо живі емоції та атмосферу вашого дня у 4K.",
+    "instagram": "https://www.instagram.com/milanpaparazzi/",
+    "telegram": "https://t.me/Milanpapparazzi",
+    "whatsapp": "https://wa.me/380993360339",
+    "email": "milanpaparazzi@gmail.com"
+  },
+  "weddings": [
+    {
+      "slug": "milan-01-08-26",
+      "couple": "Весільний фільм",
+      "subtitle": "01 серпня 2026 • Оригінальна версія",
+      "date": "01.08.2026",
+      "location": "Оригінал без стиснення",
+      "coverImage": "assets/cover-01-08-26.jpg",
+      "youtubeFullId": "rCMutv7lfFA",
+      "youtubeClipId": "0JoU7OOpmUA",
+      "driveDownloadUrl": "https://drive.google.com/file/d/1YORzSuJK4SVuRDQffH9-0AWLKffcVuhU/view?usp=drivesdk",
+      "driveClipUrl": "https://drive.google.com/file/d/1-tHl_7BbOGQdlxwhAC-V_WxpSqnsifmF/view?usp=drivesdk",
+      "driveFileSize": "22 ГБ • Фільм + 273 МБ • Кліп",
+      "note": "Для комфортного перегляду на телефоні чи телевізорі використовуйте вбудований плеєр вище. Повний файл без стиснення (3 год 26 хв) доступний для завантаження на ПК або флешку."
+    }
+  ]
+}
