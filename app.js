@@ -1,6 +1,10 @@
 (function () {
   const qs = new URLSearchParams(window.location.search);
-  const requestedSlug = qs.get("w") || window.location.hash.replace(/^#/, "");
+  const basePrefix = window.__BASE_PREFIX__ || "";
+  const requestedSlug =
+    window.__WEDDING_SLUG__ ||
+    qs.get("w") ||
+    window.location.hash.replace(/^#/, "");
 
   const el = (id) => document.getElementById(id);
 
@@ -51,7 +55,7 @@
     `;
   }
 
-  fetch("weddings.json")
+  fetch(basePrefix + "weddings.json")
     .then((r) => r.json())
     .then((data) => {
       const brand = data.brand || {};
@@ -61,12 +65,12 @@
 
       if (!wedding) return;
 
-      document.title = `${wedding.couple} — ${brand.name || "Wedding Film"}`;
+      document.title = `${wedding.couple} (${wedding.date}) — ${brand.name || "Wedding Film"}`;
 
       el("hero-title").textContent = wedding.couple;
       el("hero-subtitle").textContent = wedding.subtitle;
       if (wedding.coverImage) {
-        el("hero-cover").src = wedding.coverImage;
+        el("hero-cover").src = basePrefix + wedding.coverImage;
       }
       el("wedding-note").textContent = wedding.note || "";
       el("drive-size").textContent = wedding.driveFileSize || "MP4";
