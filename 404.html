@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Milan Nechesanov — Перенаправлення</title>
+  <script>
+    (function () {
+      var parts = window.location.pathname.split("/").filter(Boolean);
+      var slug = parts.length ? parts[parts.length - 1] : "";
+      var base = parts.length > 1 ? "/" + parts[0] + "/" : "/";
+      window.location.replace(base + (slug ? "?w=" + encodeURIComponent(slug) : ""));
+    })();
+  </script>
+</head>
+<body></body>
+</html>
